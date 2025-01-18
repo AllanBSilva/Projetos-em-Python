@@ -17,29 +17,34 @@ Além disso, você precisará instalar as dependências necessárias. Execute o 
 
 ```bash
 pip install tk sqlite3
+```
 
 Nota: O módulo sqlite3 já é parte da biblioteca padrão do Python, então não é necessário instalá-lo separadamente.
 
-Como Usar
+## Como Usar
 Passo 1: Baixe o código
 Baixe ou clone o repositório:
 
-bash
-Copiar
+```bash
 git clone https://github.com/seu-usuario/calculadora-com-sqlite-tkinter.git
+```
+
 Passo 2: Execute a aplicação
 Navegue até o diretório onde o arquivo Python (calculadora.py) está localizado e execute o seguinte comando:
 
-bash
-Copiar
+
+```bash
 python calculadora.py
+```
+
 Passo 3: Interaja com a calculadora
 Entrada de dados: Insira dois números nos campos de entrada (Número 1 e Número 2).
 Operações: Clique nos botões de operações para somar, subtrair, multiplicar, dividir ou calcular a raiz quadrada.
 Histórico: O histórico de cálculos realizados será exibido na parte inferior da interface. O histórico é salvo no banco de dados SQLite.
 Resultado: O resultado de cada operação será exibido na área de "Resultado".
 Função de Recarregar o Último Resultado: Você pode clicar no botão "⟳" para carregar o último resultado realizado na entrada do primeiro número.
-Estrutura do Banco de Dados
+
+## Estrutura do Banco de Dados
 A aplicação utiliza um banco de dados SQLite chamado my_calculator.db, que contém uma tabela chamada calculations. Essa tabela armazena as seguintes informações:
 
 id (INTEGER): Identificador único da operação.
@@ -47,7 +52,8 @@ numero1 (REAL): O primeiro número inserido.
 numero2 (REAL): O segundo número inserido.
 operation (TEXT): A operação realizada (ex: +, -, *, /, sqrt).
 result (REAL): O resultado da operação.
-Código
+
+## Código
 O código da calculadora está estruturado da seguinte forma:
 
 Calculadora Class: Contém toda a lógica da aplicação, incluindo a interface Tkinter, operações matemáticas, armazenamento no banco de dados e exibição do histórico.
@@ -55,24 +61,24 @@ SQLite: O banco de dados é usado para salvar as operações realizadas, utiliza
 Exemplo de operação no banco de dados
 Quando você realiza uma operação, como somar 2 e 3, o banco de dados armazena a seguinte entrada:
 
-plaintext
-Copiar
+```
 numero1: 2
 numero2: 3
 operation: +
 result: 5
-Exemplo de Interface
+```
+
+## Exemplo de Interface
 A interface gráfica da calculadora consiste em:
 
 Campos de entrada para inserir dois números.
 Botões para realizar as operações básicas e a raiz quadrada.
 Área de exibição do resultado.
 Um histórico de cálculos anteriores, que é carregado ao iniciar a aplicação e atualizado conforme novas operações são realizadas.
-Considerações Finais
+
+## Considerações Finais
 Este é um projeto simples de calculadora com Tkinter e SQLite, perfeito para quem está começando a aprender sobre interfaces gráficas em Python e também sobre como interagir com bancos de dados. O código pode ser expandido para incluir mais funcionalidades, como operações com mais números ou a adição de um sistema de login.
 
-markdown
-Copiar
 
 ---
 
