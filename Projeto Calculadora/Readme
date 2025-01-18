@@ -6,29 +6,26 @@ Operações Básicas: Soma, subtração, multiplicação e divisão.
 Raiz Quadrada: Calcula a raiz quadrada de um número inserido.
 Histórico de Cálculos: Armazena todas as operações realizadas em um banco de dados SQLite e exibe o histórico de cálculos realizados.
 Armazenamento em Banco de Dados: Usa SQLite para salvar as operações e resultados, que podem ser consultados a qualquer momento.
+
 Requisitos
 Antes de executar o projeto, certifique-se de ter o Python 3.x instalado no seu sistema.
 
 Além disso, você precisará instalar as dependências necessárias. Execute o seguinte comando para instalar as bibliotecas requeridas:
-
-bash
-Copiar
 pip install tk sqlite3
+
 Nota: O módulo sqlite3 já é parte da biblioteca padrão do Python, então não é necessário instalá-lo separadamente.
 
 Como Usar
 Passo 1: Baixe o código
 Baixe ou clone o repositório:
 
-bash
-Copiar
 git clone https://github.com/seu-usuario/calculadora-com-sqlite-tkinter.git
+
 Passo 2: Execute a aplicação
 Navegue até o diretório onde o arquivo Python (calculadora.py) está localizado e execute o seguinte comando:
 
-bash
-Copiar
 python calculadora.py
+
 Passo 3: Interaja com a calculadora
 Entrada de dados: Insira dois números nos campos de entrada (Número 1 e Número 2).
 Operações: Clique nos botões de operações para somar, subtrair, multiplicar, dividir ou calcular a raiz quadrada.
