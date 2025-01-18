@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <form action="{{ url_for('add_task') }}" method="POST">
+            <input type="text" name="title" placeholder="Nova tarefa" required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <ul>
+            {% for task in tasks %}
+            <li>
+                <span class="{{ 'completed' if task.completed else '' }}">{{ task.title }}</span>
+                <button onclick="completeTask({{ task.id }})">
+                    {% if task.completed %}
+                        Desmarcar
+                    {% else %}
+                        Completar
+                    {% endif %}
+                </button>
+                <button onclick="deleteTask({{ task.id }})">Excluir</button>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        function completeTask(taskId) {
+            fetch(`/complete/${taskId}`, {
+                method: 'PATCH'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.reload();
+                }
+            });
+        }
+
+        function deleteTask(taskId) {
+            fetch(`/delete/${taskId}`, {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    window.location.reload();
+                } else {
+                    alert(data.message);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
