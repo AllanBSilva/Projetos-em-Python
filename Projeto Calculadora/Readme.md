@@ -88,6 +88,5 @@ Este é um projeto simples de calculadora com Tkinter e SQLite, perfeito para qu
 2. **Rodar a aplicação**: Execute o arquivo Python `calculadora.py` com `python calculadora.py`.
 3. **Funcionalidade**: Utilize a interface gráfica para realizar operações matemáticas, ver os resultados, e consultar o histórico de cálculos realizados.
 
-Esse README está formatado de acordo com as boas práticas de Markdown para garantir clareza e facilitar o uso do projeto.
 
 
